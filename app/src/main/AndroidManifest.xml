@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+ * @author: Rachel Stinnett
+ * @file: AndroidManifest.xml
+ * @assignment: Programming Assignment 8- Sketcher
+ * @course: CSC 317; Spring 2022
+ * @description: The purpose of this programming assignment is to
+ * create an application that allows the user to draw pictures, and
+ * share pictures with people from their contacts using email. When
+ * the application begins, the user is presented with a simple drawing
+ * that has 4 colors, 3 stroke withs, and two action buttons in the user
+ * interface. The user interface allows the user to select their color,
+ * and stroke width, and draw on a canvas below. After drawing a picture,
+ * the user can either clear the canvas, or share the picture with
+ * someone from their contact list using their email. If there is not
+ * an email within the contact list than the user can manually put one
+ * in when drafting the email. In this AndroidManifest.xml this is the
+ * manifest file which describes essential information about the app to
+ * the Android build tools, the Android operating system, and Google Play.
+
+ */
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.sketcher">
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Sketcher">
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.android.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"></meta-data>
+        </provider>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

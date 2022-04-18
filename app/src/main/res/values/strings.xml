@@ -1,0 +1,31 @@
+<!--
+/*
+ * @author: Rachel Stinnett
+ * @file: strings.xml
+ * @assignment: Programming Assignment 8- Sketcher
+ * @course: CSC 317; Spring 2022
+ * @description: The purpose of this programming assignment is to
+ * create an application that allows the user to draw pictures, and
+ * share pictures with people from their contacts using email. When
+ * the application begins, the user is presented with a simple drawing
+ * that has 4 colors, 3 stroke withs, and two action buttons in the user
+ * interface. The user interface allows the user to select their color,
+ * and stroke width, and draw on a canvas below. After drawing a picture,
+ * the user can either clear the canvas, or share the picture with
+ * someone from their contact list using their email. If there is not
+ * an email within the contact list than the user can manually put one
+ * in when drafting the email. In this strings.xml all of the strings
+ * for this application are externalized here. There are not a lot
+ * of strings since majority of this program focuses on the drawing
+ * and the list view and email intent within the fragments.
+ */
+-->
+<resources>
+    <string name="app_name">Sketcher</string>
+    <string name="clearButton">CLEAR</string>
+    <string name="shareButton">SHARE</string>
+    <string name="sketcherDrawing">Drawing</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="filePathTitle">sketcherDrawing_Image</string>
+    <string name="setType">vnd.android.cursor.dir/email</string>
+</resources>

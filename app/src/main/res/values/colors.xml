@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+ * @author: Rachel Stinnett
+ * @file: colors.xml
+ * @assignment: Programming Assignment 8- Sketcher
+ * @course: CSC 317; Spring 2022
+ * @description: The purpose of this programming assignment is to
+ * create an application that allows the user to draw pictures, and
+ * share pictures with people from their contacts using email. When
+ * the application begins, the user is presented with a simple drawing
+ * that has 4 colors, 3 stroke withs, and two action buttons in the user
+ * interface. The user interface allows the user to select their color,
+ * and stroke width, and draw on a canvas below. After drawing a picture,
+ * the user can either clear the canvas, or share the picture with
+ * someone from their contact list using their email. If there is not
+ * an email within the contact list than the user can manually put one
+ * in when drafting the email. In this colors.xml all of the colors
+ * for the program are stored here for the xml within the fragments.
+ * Like the various button colors and the list view background color.
+ */
+-->
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#3C3B3E</color>
+    <color name="purple_700">#3D3C3E</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="redButton">#F44336</color>
+    <color name="greenButton">#4CAF50</color>
+    <color name="blueButton">#3F51B5</color>
+    <color name="purpleButton">#9C27B0</color>
+    <color name="smallButton">#676B81</color>
+    <color name="mediumButton">#8A8C9C</color>
+    <color name="largeButton">#BEC0CF</color>
+    <color name="clearButton">#242527</color>
+    <color name="shareButton">#3E4043</color>
+    <color name="buttonText">#FF000000</color>
+    <color name="buttonText2">#FFFFFFFF</color>
+    <color name="canvasColor">#FFFFFFFF</color>
+    <color name="textColor">#212323</color>
+    <color name="listViewBackground">#FDE394</color>
+</resources>

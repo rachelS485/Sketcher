@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+ * @author: Rachel Stinnett
+ * @file: fragment_contact_list.xml
+ * @assignment: Programming Assignment 8- Sketcher
+ * @course: CSC 317; Spring 2022
+ * @description: The purpose of this programming assignment is to
+ * create an application that allows the user to draw pictures, and
+ * share pictures with people from their contacts using email. When
+ * the application begins, the user is presented with a simple drawing
+ * that has 4 colors, 3 stroke withs, and two action buttons in the user
+ * interface. The user interface allows the user to select their color,
+ * and stroke width, and draw on a canvas below. After drawing a picture,
+ * the user can either clear the canvas, or share the picture with
+ * someone from their contact list using their email. If there is not
+ * an email within the contact list than the user can manually put one
+ * in when drafting the email. In this fragment_contact_list.xml there
+ * is only a single list view since it creates the Ui for the contact
+ * list. This is the only xml components that are needed for this
+ * fragment.
+ */
+-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ContactListFragment">
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/listViewBackground"/>
+</FrameLayout>

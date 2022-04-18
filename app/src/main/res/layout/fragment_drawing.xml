@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+ * @author: Rachel Stinnett
+ * @file: fragment_drawing.xml
+ * @assignment: Programming Assignment 8- Sketcher
+ * @course: CSC 317; Spring 2022
+ * @description: The purpose of this programming assignment is to
+ * create an application that allows the user to draw pictures, and
+ * share pictures with people from their contacts using email. When
+ * the application begins, the user is presented with a simple drawing
+ * that has 4 colors, 3 stroke withs, and two action buttons in the user
+ * interface. The user interface allows the user to select their color,
+ * and stroke width, and draw on a canvas below. After drawing a picture,
+ * the user can either clear the canvas, or share the picture with
+ * someone from their contact list using their email. If there is not
+ * an email within the contact list than the user can manually put one
+ * in when drafting the email. In this fragment_drawing.xml the Ui is
+ * laid out for the canvas drawing. The way this is done is by using
+ * a combination of ImageViews and TextView. This xml uses 4 ImageViews
+ * with a background color to be the 4 color buttons. There is red,
+ * green, blue, and purple. This xml then uses 5 TextViews for the
+ * buttons that are supposed to contain text in them. There is 3
+ * buttons for the stroke size s, m, and l. THen there are 2 buttons
+ * for the clear and share. Constraint layout was also used to place
+ * each of the components next to each other.
+ */
+-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DrawingFragment">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".SearchFragment">
+        <ImageView
+            android:id="@+id/redButton"
+            android:layout_width="103dp"
+            android:layout_height="75dp"
+            android:layout_marginTop="0dp"
+            android:background="@color/redButton"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <ImageView
+            android:id="@+id/greenButton"
+            android:layout_width="103dp"
+            android:layout_height="75dp"
+            android:layout_marginTop="0dp"
+            android:background="@color/greenButton"
+            app:layout_constraintLeft_toRightOf="@id/redButton"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <ImageView
+            android:id="@+id/blueButton"
+            android:layout_width="103dp"
+            android:layout_height="75dp"
+            android:layout_marginTop="0dp"
+            android:background="@color/blueButton"
+            app:layout_constraintLeft_toRightOf="@id/greenButton"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <ImageView
+            android:id="@+id/purpleButton"
+            android:layout_width="103dp"
+            android:layout_height="75dp"
+            android:layout_marginTop="0dp"
+            android:background="@color/purpleButton"
+            app:layout_constraintLeft_toRightOf="@id/blueButton"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <TextView
+            android:id="@+id/smallButton"
+            android:layout_width="82dp"
+            android:layout_height="75dp"
+            android:layout_marginTop="0dp"
+            android:text="S"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textSize="10pt"
+            android:textColor="@color/buttonText"
+            android:background="@color/smallButton"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/redButton"/>
+        <TextView
+            android:id="@+id/mediumButton"
+            android:layout_width="82dp"
+            android:layout_height="75dp"
+            android:layout_marginTop="0dp"
+            android:text="M"
+            android:textSize="10pt"
+            android:textColor="@color/buttonText"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:background="@color/mediumButton"
+            app:layout_constraintLeft_toRightOf="@id/smallButton"
+            app:layout_constraintTop_toBottomOf="@id/greenButton"/>
+        <TextView
+            android:id="@+id/largeButton"
+            android:layout_width="82dp"
+            android:layout_height="75dp"
+            android:layout_marginTop="0dp"
+            android:text="L"
+            android:textSize="10pt"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textColor="@color/buttonText"
+            android:background="@color/largeButton"
+            app:layout_constraintLeft_toRightOf="@id/mediumButton"
+            app:layout_constraintTop_toBottomOf="@id/greenButton"/>
+        <TextView
+            android:id="@+id/clearButton"
+            android:layout_width="82dp"
+            android:layout_height="75dp"
+            android:layout_marginTop="0dp"
+            android:text="@string/clearButton"
+            android:textSize="10pt"
+            android:textColor="@color/buttonText2"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:background="@color/clearButton"
+            app:layout_constraintLeft_toRightOf="@id/largeButton"
+            app:layout_constraintTop_toBottomOf="@id/blueButton"/>
+        <TextView
+            android:id="@+id/shareButton"
+            android:layout_width="84dp"
+            android:layout_height="75dp"
+            android:layout_marginTop="0dp"
+            android:text="@string/shareButton"
+            android:textSize="10pt"
+            android:textColor="@color/buttonText2"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:background="@color/shareButton"
+            app:layout_constraintLeft_toRightOf="@id/clearButton"
+            app:layout_constraintTop_toBottomOf="@id/purpleButton"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:orientation="vertical"
+            tools:context=".MainActivity"
+            android:id="@+id/drawingCanvas"
+            android:layout_weight="1"
+            android:background="@color/canvasColor"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/largeButton">
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
